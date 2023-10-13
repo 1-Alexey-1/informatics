@@ -6,7 +6,7 @@ s+=' '
 m=0
 k=0
 for i in range(len(s)):
-    if s[i]=='b':
+    if s[i]=='н':
         k+=1
     elif k>m:
         m=k
