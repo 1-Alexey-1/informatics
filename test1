@@ -1,0 +1,14 @@
+'''
+#задача1
+def read_last(lines, file):
+    abstract_file = open(file, 'r',encoding='utf-8')
+    rows=abstract_file.readlines()
+    print(*rows[lines:])
+n=int(input('введите номер: '))
+path_file=r'\Users\sapfi\informatics\text.txt'
+file=open(path_file,'r',encoding='utf-8')
+rows_number = len(file.readlines()) #Получаем объем файла в строках
+
+if n > 0 and n < rows_number:
+    read_last(n, path_file)
+'''
