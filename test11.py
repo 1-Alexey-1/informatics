@@ -1,43 +1,13 @@
-
-#задание3 Построить в общих осях графики для x<0.
-#На том же графике сделать 1 врезку, демонстрирующую поведение графиков при удалении x от 0 к −∞.
-#Необходимо продемонстрировать возможность (или невозможность) пересечений и стремление функций. Так же нанесите на графики прямую f(x) = 0.
-#Цвет линий на врезках и основном графике должен быть одинаковым для одних и тех же значений α и β.
-import matplotlib.pyplot as plt
 import numpy as np
-fig=plt.figure()
-x = np.linspace(-100, 0, 1000)
-y1=((x**1)+(1**1))/x**1
-y2=((x**(1))+(2**(1)))/x**(1)
-y3=((x**(2))+(1**(2)))/x**(2)
-plt.plot(x, y3, 'g')
-plt.plot(x, y2, color='orange')
-plt.plot(x, y1, 'b')
-plt.xlabel('ось x')
-plt.ylabel('ось y')
-plt.title('график1')
-axes1=fig.add_axes([0.2, 0.4, 0.15, 0.15])
-axes1.plot([0.15,0.05])
-axes1.plot([0.25,0.15])
-axes1.plot([0.25,0.3])
-plt.show()
-'''
-#задание4 Построить в общих осях графики для:
-#α=1,β=0.5
-#α=1,β=−0.5
-#α=1,β=−1.5
-#Сделайте выводы о поведении графиков, включая возрастание/убывание и выпуклость/вогнутость
-
-import matplotlib.pyplot as plt
-import numpy as np
-x = np.linspace(-10, 10, 1000)
-y1=((x**0.5)+(1**0.5))/x**0.5
-y2=((x**(-0.5))+(1**(-0.5)))/x**(-0.5)
-y3=((x**(-1.5))+(1**(-1.5)))/x**(-1.5)
-plt.plot(x, y3, 'y')
-plt.plot(x, y2, 'g')
-plt.plot(x, y1, 'r')
-plt.xlabel('ось x')
-plt.ylabel('ось y')
-plt.title('график2')
-plt.show()
+import pandas as pd
+src_list = list('abcde')
+src_arr = np.arange(5)
+src_dict = dict(zip(src_list, src_arr))
+ 
+s1 = pd.Series(src_list)
+s2 = pd.Series(src_arr)
+s3 = pd.Series(src_dict)
+ 
+print(s1)
+print(s2)
+print(s3)
